@@ -1,0 +1,18 @@
+## Use Case: Simplifying Policy Recommendations for Businesses & Individuals
+
+Navigating complex policy documents can be a daunting task for businesses and individuals looking for the best policies that align with their needs. Whether it's compliance regulations, insurance policies, or internal corporate guidelines, finding relevant policies from lengthy documents is time-consuming and inefficient.
+
+This project offers an AI-powered policy recommendation system that streamlines this process. Using Retrieval-Augmented Generation (RAG) with LangChain , it enables users to quickly extract the most relevant policy details based on their unique requirements.
+
+
+### How It Works:
+
+The system is built with Streamlit , providing an intuitive interface with three main sections:
+
+1.  Document Upload: Users upload a PDF document containing policy information. The system extracts the text using pdfplumber , then reconstructs and saves the document in a dedicated directory for further processing.
+
+2.  Model Training: The extracted content is converted into vector embeddings and stored in ChromaDB . This step ensures the model can retrieve relevant policy sections efficiently.
+
+3.  Policy Search & Recommendation: Users input specific criteria, which the system uses as a query to search the document. The RAG model retrieves the most relevant policies and presents them as personalized recommendations.
+
+By leveraging natural language processing and vector search , this solution enables faster, context-aware policy recommendations, eliminating the need for manual document reviews and making decision-making more efficient.
